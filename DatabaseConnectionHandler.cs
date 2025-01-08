@@ -8,13 +8,13 @@ using Microsoft.Data.SqlClient;
 
 namespace Sql_Interactor
 {
-    public class DatabaseConnectionHandler
+    internal class DatabaseConnectionHandler
     {
 
         private static DatabaseConnectionHandler instance;
         private SqlConnection connection;
         private static readonly object _lock = new object();
-        private readonly string connectionString = @"Data Source=DESKTOP-OND0HNG;Initial Catalog=""JJJ International"";Integrated Security=True;Trust Server Certificate=True";
+        private readonly string connectionString = @"Data Source=DESKTOP-OND0HNG;Initial Catalog=JJJ_International;Integrated Security=True;Trust Server Certificate=True";
 
         private DatabaseConnectionHandler()
         {
