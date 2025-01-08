@@ -13,11 +13,16 @@ namespace Sql_Interactor
 {
     public partial class Sql_Interactor_Login_Screen : Form
     {
-        private SqlConnection workers_database_connection = new SqlConnection(@"Data Source=DESKTOP-OND0HNG;Initial Catalog=JJJ_International_Workers;Integrated Security=True;Trust Server Certificate=True");
+        string pc_name;
+        string connection_string;
+        SqlConnection workers_database_connection;
 
         public Sql_Interactor_Login_Screen()
         {
             InitializeComponent();
+            pc_name = Environment.MachineName;
+            connection_string = @$"Data Source={pc_name};Initial Catalog=JJJ_International_Workers;Integrated Security=True;Trust Server Certificate=True";
+            workers_database_connection = new SqlConnection(connection_string);
         }
 
         private void button_Login_Click(object sender, EventArgs e)

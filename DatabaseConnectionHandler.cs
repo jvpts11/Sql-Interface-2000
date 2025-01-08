@@ -14,10 +14,12 @@ namespace Sql_Interactor
         private static DatabaseConnectionHandler instance;
         private SqlConnection connection;
         private static readonly object _lock = new object();
-        private readonly string connectionString = @"Data Source=DESKTOP-OND0HNG;Initial Catalog=JJJ_International;Integrated Security=True;Trust Server Certificate=True";
+        private readonly string connectionString;
 
         private DatabaseConnectionHandler()
         {
+            string pc_name = Environment.MachineName;
+            connectionString = @$"Data Source={pc_name};Initial Catalog=JJJ_International;Integrated Security=True;Trust Server Certificate=True";
             try
             {
                 connection = new SqlConnection(connectionString);
