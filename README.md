@@ -8,6 +8,7 @@ Instruções de uso:
 2. instale os seguintes pacotes do dotnet:
 
 dotnet add package Microsoft.Extensions.Logging
+
 dotnet add package Microsoft.Data.SqlClient
 
 execute o programa e gere as bases de dados com os scripts de sql fornecidos.
