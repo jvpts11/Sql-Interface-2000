@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,17 +22,18 @@ namespace Sql_Interactor
         public Sql_Interactor_Login_Screen()
         {
             InitializeComponent();
+
             pc_name = Environment.MachineName;
             connection_string = @$"Data Source={pc_name};Initial Catalog=JJJ_International_Workers;Integrated Security=True;Trust Server Certificate=True";
             workers_database_connection = new SqlConnection(connection_string);
+            Console.WriteLine("Login Screen Initialized");
         }
 
         private void button_Login_Click(object sender, EventArgs e)
         {
             String user_id, birth_date, f_name, l_name;
             Functions function;
-            user_id = textBox_User_Id.Text;
-            birth_date = textBox_Password.Text;
+            
 
             try
             {
@@ -49,16 +52,24 @@ namespace Sql_Interactor
                     function = (Functions)row["FunctionF_Id"];
 
                     Worker w = new Worker(int.Parse(user_id), f_name, l_name, DateTime.Parse(birth_date), function);
-                    
+
+                    Console.WriteLine($"Inserted user: \nid: {user_id}\nFirst name: {f_name}\nLast Name: {l_name}");
+                    Console.WriteLine("Login succesful");
 
                     Sql_Interactor_Menu menu = new Sql_Interactor_Menu(w, workers_database_connection);
                     menu.Show();
                     this.Hide();
                 }
+                else
+                {
+                    Console.WriteLine("Invalid Credentials");
+                    MessageBox.Show("Invalid Credentials", "Connection");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Invalid login" + ex.Message);
+                Console.WriteLine("Could not login due to error: " +  ex.Message);
+                MessageBox.Show("Error loging in");
             }
         }
 

@@ -113,7 +113,7 @@
             Controls.Add(button_Clear_Text);
             Controls.Add(button_Login);
             Name = "Sql_Interactor_Login_Screen";
-            Text = "Sql_Interactor_Login_Screen";
+            Text = "Sql Interactor 2000";
             ResumeLayout(false);
             PerformLayout();
         }
