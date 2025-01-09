@@ -22,6 +22,7 @@ namespace Sql_Interactor
             connectionString = @$"Data Source={pc_name};Initial Catalog=JJJ_International;Integrated Security=True;Trust Server Certificate=True";
             try
             {
+                Console.WriteLine("PC Name obtained:" + pc_name);
                 connection = new SqlConnection(connectionString);
                 connection.Open();
                 MessageBox.Show("Connection stablished with success","Connection to database",MessageBoxButtons.OK,MessageBoxIcon.Information);

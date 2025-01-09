@@ -60,7 +60,8 @@ namespace Sql_Interactor
                 warehousesToolStripMenuItem.Visible = false;
                 storesToolStripMenuItem.Visible = false;
                 projectToolStripMenuItem.Visible = false;
-            }else if (worker.Function == Functions.Store_manager)
+            }
+            else if (worker.Function == Functions.Store_manager)
             {
                 clientToolStripMenuItem.Visible = false;
                 sellToolStripMenuItem.Visible = false;
@@ -71,14 +72,16 @@ namespace Sql_Interactor
                 warehousesToolStripMenuItem.Visible = false;
                 storesToolStripMenuItem.Visible = false;
                 projectToolStripMenuItem.Visible = false;
-            }else if (worker.Function == Functions.Logistics_manager)
+            }
+            else if (worker.Function == Functions.Logistics_manager)
             {
                 clientToolStripMenuItem.Visible = false;
                 sellToolStripMenuItem.Visible = false;
                 warehousesAddToolStripMenuItem.Visible = false;
                 storesToolStripMenuItem.Visible = false;
                 projectToolStripMenuItem.Visible = false;
-            }else if (worker.Function == Functions.Engineer)
+            }
+            else if (worker.Function == Functions.Engineer)
             {
                 warehousesAddToolStripMenuItem.Visible = false;
                 storesToolStripMenuItem.Visible = false;
@@ -314,6 +317,12 @@ namespace Sql_Interactor
             {
                 MessageBox.Show("Can't perform operation. ", "Sql Interactor 2000", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void clientAddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Client add_client = new Add_Client(workers_database_connection,connection);
+            add_client.Show();
         }
     }
 }
