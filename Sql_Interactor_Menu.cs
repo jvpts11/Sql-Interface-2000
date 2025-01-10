@@ -321,8 +321,26 @@ namespace Sql_Interactor
 
         private void clientAddToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Add_Client add_client = new Add_Client(workers_database_connection,connection);
+            Add_Client add_client = new Add_Client(workers_database_connection, connection);
             add_client.Show();
+        }
+
+        private void clientDeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteClient delete_customer = new DeleteClient(connection);
+            delete_customer.Show();
+        }
+
+        private void clientSearchByToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            CustomerSearchBy searchby = new CustomerSearchBy(connection);
+            searchby.Show();
+        }
+
+        private void clientUpdateDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateClient update_client = new UpdateClient(connection);
+            update_client.Show();
         }
     }
 }
