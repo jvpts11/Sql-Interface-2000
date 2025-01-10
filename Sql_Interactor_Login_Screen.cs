@@ -75,7 +75,8 @@ namespace Sql_Interactor
 
         private void button_Clear_Text_Click(object sender, EventArgs e)
         {
-            
+            textBox_User_Id.Clear();
+            textBox_Password.Clear();
         }
     }
 }
