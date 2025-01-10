@@ -139,34 +139,34 @@
             // clientAddToolStripMenuItem
             // 
             clientAddToolStripMenuItem.Name = "clientAddToolStripMenuItem";
-            clientAddToolStripMenuItem.Size = new Size(224, 26);
+            clientAddToolStripMenuItem.Size = new Size(213, 26);
             clientAddToolStripMenuItem.Text = "Add";
             clientAddToolStripMenuItem.Click += clientAddToolStripMenuItem_Click;
             // 
             // clientSearchToolStripMenuItem
             // 
             clientSearchToolStripMenuItem.Name = "clientSearchToolStripMenuItem";
-            clientSearchToolStripMenuItem.Size = new Size(224, 26);
+            clientSearchToolStripMenuItem.Size = new Size(213, 26);
             clientSearchToolStripMenuItem.Text = "Search";
             // 
             // clientDeleteToolStripMenuItem
             // 
             clientDeleteToolStripMenuItem.Name = "clientDeleteToolStripMenuItem";
-            clientDeleteToolStripMenuItem.Size = new Size(224, 26);
+            clientDeleteToolStripMenuItem.Size = new Size(213, 26);
             clientDeleteToolStripMenuItem.Text = "Delete";
             clientDeleteToolStripMenuItem.Click += clientDeleteToolStripMenuItem_Click;
             // 
             // clientSearchByToolStripMenuItem3
             // 
             clientSearchByToolStripMenuItem3.Name = "clientSearchByToolStripMenuItem3";
-            clientSearchByToolStripMenuItem3.Size = new Size(224, 26);
+            clientSearchByToolStripMenuItem3.Size = new Size(213, 26);
             clientSearchByToolStripMenuItem3.Text = "Search by...";
             clientSearchByToolStripMenuItem3.Click += clientSearchByToolStripMenuItem3_Click;
             // 
             // clientUpdateDataToolStripMenuItem
             // 
             clientUpdateDataToolStripMenuItem.Name = "clientUpdateDataToolStripMenuItem";
-            clientUpdateDataToolStripMenuItem.Size = new Size(224, 26);
+            clientUpdateDataToolStripMenuItem.Size = new Size(213, 26);
             clientUpdateDataToolStripMenuItem.Text = "Update Customer Data";
             clientUpdateDataToolStripMenuItem.Click += clientUpdateDataToolStripMenuItem_Click;
             // 
@@ -180,19 +180,21 @@
             // carRegisterToolStripMenuItem
             // 
             carRegisterToolStripMenuItem.Name = "carRegisterToolStripMenuItem";
-            carRegisterToolStripMenuItem.Size = new Size(154, 26);
+            carRegisterToolStripMenuItem.Size = new Size(224, 26);
             carRegisterToolStripMenuItem.Text = "Register";
+            carRegisterToolStripMenuItem.Click += carRegisterToolStripMenuItem_Click;
             // 
             // carAddModelToolStripMenuItem
             // 
             carAddModelToolStripMenuItem.Name = "carAddModelToolStripMenuItem";
-            carAddModelToolStripMenuItem.Size = new Size(154, 26);
+            carAddModelToolStripMenuItem.Size = new Size(224, 26);
             carAddModelToolStripMenuItem.Text = "Add Model";
+            carAddModelToolStripMenuItem.Click += carAddModelToolStripMenuItem_Click;
             // 
             // carSearchByToolStripMenuItem
             // 
             carSearchByToolStripMenuItem.Name = "carSearchByToolStripMenuItem";
-            carSearchByToolStripMenuItem.Size = new Size(154, 26);
+            carSearchByToolStripMenuItem.Size = new Size(224, 26);
             carSearchByToolStripMenuItem.Text = "Search by...";
             // 
             // batchToolStripMenuItem
@@ -224,20 +226,23 @@
             // sellPerformSellToolStripMenuItem
             // 
             sellPerformSellToolStripMenuItem.Name = "sellPerformSellToolStripMenuItem";
-            sellPerformSellToolStripMenuItem.Size = new Size(154, 26);
+            sellPerformSellToolStripMenuItem.Size = new Size(224, 26);
             sellPerformSellToolStripMenuItem.Text = "Perform Sell";
+            sellPerformSellToolStripMenuItem.Click += sellPerformSellToolStripMenuItem_Click;
             // 
             // sellUndoSellToolStripMenuItem
             // 
             sellUndoSellToolStripMenuItem.Name = "sellUndoSellToolStripMenuItem";
-            sellUndoSellToolStripMenuItem.Size = new Size(154, 26);
+            sellUndoSellToolStripMenuItem.Size = new Size(224, 26);
             sellUndoSellToolStripMenuItem.Text = "Undo Sell";
+            sellUndoSellToolStripMenuItem.Click += sellUndoSellToolStripMenuItem_Click;
             // 
             // sellSearchSellToolStripMenuItem
             // 
             sellSearchSellToolStripMenuItem.Name = "sellSearchSellToolStripMenuItem";
-            sellSearchSellToolStripMenuItem.Size = new Size(154, 26);
+            sellSearchSellToolStripMenuItem.Size = new Size(224, 26);
             sellSearchSellToolStripMenuItem.Text = "Search by...";
+            sellSearchSellToolStripMenuItem.Click += sellSearchSellToolStripMenuItem_Click;
             // 
             // transportationToolStripMenuItem
             // 

@@ -342,5 +342,35 @@ namespace Sql_Interactor
             UpdateClient update_client = new UpdateClient(connection);
             update_client.Show();
         }
+
+        private void carRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Regist_Car regist_Car = new Regist_Car(workers_database_connection, connection);
+            regist_Car.Show();
+        }
+
+        private void carAddModelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Regist_Car_Model regist_Car_Model = new Regist_Car_Model(workers_database_connection, connection);
+            regist_Car_Model.Show();
+        }
+
+        private void sellPerformSellToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Perform_Sell perform_sell = new Perform_Sell(workers_database_connection, connection);
+            perform_sell.Show();
+        }
+
+        private void sellUndoSellToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Undo_Sell undo_Sell = new Undo_Sell(workers_database_connection, connection);
+            undo_Sell.Show();
+        }
+
+        private void sellSearchSellToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchSell search_sell = new SearchSell(workers_database_connection, connection);
+            search_sell.Show();
+        }
     }
 }
