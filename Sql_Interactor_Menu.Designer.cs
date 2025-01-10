@@ -38,6 +38,7 @@
             clientSearchToolStripMenuItem = new ToolStripMenuItem();
             clientDeleteToolStripMenuItem = new ToolStripMenuItem();
             clientSearchByToolStripMenuItem3 = new ToolStripMenuItem();
+            clientUpdateDataToolStripMenuItem = new ToolStripMenuItem();
             carToolStripMenuItem = new ToolStripMenuItem();
             carRegisterToolStripMenuItem = new ToolStripMenuItem();
             carAddModelToolStripMenuItem = new ToolStripMenuItem();
@@ -54,6 +55,7 @@
             transportationRegisterEntryToolStripMenuItem = new ToolStripMenuItem();
             transportationListEntriesToolStripMenuItem = new ToolStripMenuItem();
             transportationSearchToolStripMenuItem = new ToolStripMenuItem();
+            transportUpdateDataToolStripMenuItem = new ToolStripMenuItem();
             warehousesToolStripMenuItem = new ToolStripMenuItem();
             warehousesAddToolStripMenuItem = new ToolStripMenuItem();
             storesToolStripMenuItem = new ToolStripMenuItem();
@@ -63,10 +65,12 @@
             employeeDeleteToolStripMenuItem = new ToolStripMenuItem();
             employeeListToolStripMenuItem = new ToolStripMenuItem();
             employeeSearchByToolStripMenuItem = new ToolStripMenuItem();
+            employeeUpdateDataToolStripMenuItem = new ToolStripMenuItem();
             projectToolStripMenuItem = new ToolStripMenuItem();
             projectAddToolStripMenuItem = new ToolStripMenuItem();
             projectListToolStripMenuItem = new ToolStripMenuItem();
             projectSearchByToolStripMenuItem = new ToolStripMenuItem();
+            projectUpdateDataToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             Button_See_Sells = new Button();
             Button_See_Clients = new Button();
@@ -78,10 +82,6 @@
             Data_grid_Menu = new DataGridView();
             panel1 = new Panel();
             label_Table_Name = new Label();
-            clientUpdateDataToolStripMenuItem = new ToolStripMenuItem();
-            employeeUpdateDataToolStripMenuItem = new ToolStripMenuItem();
-            projectUpdateDataToolStripMenuItem = new ToolStripMenuItem();
-            transportUpdateDataToolStripMenuItem = new ToolStripMenuItem();
             MenuStrip_Main_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Data_grid_Menu).BeginInit();
             panel1.SuspendLayout();
@@ -139,27 +139,33 @@
             // clientAddToolStripMenuItem
             // 
             clientAddToolStripMenuItem.Name = "clientAddToolStripMenuItem";
-            clientAddToolStripMenuItem.Size = new Size(180, 22);
+            clientAddToolStripMenuItem.Size = new Size(173, 22);
             clientAddToolStripMenuItem.Text = "Add";
             clientAddToolStripMenuItem.Click += clientAddToolStripMenuItem_Click;
             // 
             // clientSearchToolStripMenuItem
             // 
             clientSearchToolStripMenuItem.Name = "clientSearchToolStripMenuItem";
-            clientSearchToolStripMenuItem.Size = new Size(180, 22);
+            clientSearchToolStripMenuItem.Size = new Size(173, 22);
             clientSearchToolStripMenuItem.Text = "Search";
             // 
             // clientDeleteToolStripMenuItem
             // 
             clientDeleteToolStripMenuItem.Name = "clientDeleteToolStripMenuItem";
-            clientDeleteToolStripMenuItem.Size = new Size(180, 22);
+            clientDeleteToolStripMenuItem.Size = new Size(173, 22);
             clientDeleteToolStripMenuItem.Text = "Delete";
             // 
             // clientSearchByToolStripMenuItem3
             // 
             clientSearchByToolStripMenuItem3.Name = "clientSearchByToolStripMenuItem3";
-            clientSearchByToolStripMenuItem3.Size = new Size(180, 22);
+            clientSearchByToolStripMenuItem3.Size = new Size(173, 22);
             clientSearchByToolStripMenuItem3.Text = "Search by...";
+            // 
+            // clientUpdateDataToolStripMenuItem
+            // 
+            clientUpdateDataToolStripMenuItem.Name = "clientUpdateDataToolStripMenuItem";
+            clientUpdateDataToolStripMenuItem.Size = new Size(173, 22);
+            clientUpdateDataToolStripMenuItem.Text = "Update Client Data";
             // 
             // carToolStripMenuItem
             // 
@@ -173,6 +179,7 @@
             carRegisterToolStripMenuItem.Name = "carRegisterToolStripMenuItem";
             carRegisterToolStripMenuItem.Size = new Size(180, 22);
             carRegisterToolStripMenuItem.Text = "Register";
+            carRegisterToolStripMenuItem.Click += carRegisterToolStripMenuItem_Click;
             // 
             // carAddModelToolStripMenuItem
             // 
@@ -196,13 +203,13 @@
             // batchRegisterToolStripMenuItem
             // 
             batchRegisterToolStripMenuItem.Name = "batchRegisterToolStripMenuItem";
-            batchRegisterToolStripMenuItem.Size = new Size(180, 22);
+            batchRegisterToolStripMenuItem.Size = new Size(134, 22);
             batchRegisterToolStripMenuItem.Text = "Register";
             // 
             // batchSearchBatchToolStripMenuItem
             // 
             batchSearchBatchToolStripMenuItem.Name = "batchSearchBatchToolStripMenuItem";
-            batchSearchBatchToolStripMenuItem.Size = new Size(180, 22);
+            batchSearchBatchToolStripMenuItem.Size = new Size(134, 22);
             batchSearchBatchToolStripMenuItem.Text = "Search By...";
             // 
             // sellToolStripMenuItem
@@ -215,51 +222,57 @@
             // sellPerformSellToolStripMenuItem
             // 
             sellPerformSellToolStripMenuItem.Name = "sellPerformSellToolStripMenuItem";
-            sellPerformSellToolStripMenuItem.Size = new Size(180, 22);
+            sellPerformSellToolStripMenuItem.Size = new Size(138, 22);
             sellPerformSellToolStripMenuItem.Text = "Perform Sell";
             // 
             // sellUndoSellToolStripMenuItem
             // 
             sellUndoSellToolStripMenuItem.Name = "sellUndoSellToolStripMenuItem";
-            sellUndoSellToolStripMenuItem.Size = new Size(180, 22);
+            sellUndoSellToolStripMenuItem.Size = new Size(138, 22);
             sellUndoSellToolStripMenuItem.Text = "Undo Sell";
             // 
             // sellSearchSellToolStripMenuItem
             // 
             sellSearchSellToolStripMenuItem.Name = "sellSearchSellToolStripMenuItem";
-            sellSearchSellToolStripMenuItem.Size = new Size(180, 22);
+            sellSearchSellToolStripMenuItem.Size = new Size(138, 22);
             sellSearchSellToolStripMenuItem.Text = "Search by...";
             // 
             // transportationToolStripMenuItem
             // 
             transportationToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { transportationRegisterTransportToolStripMenuItem, transportationRegisterEntryToolStripMenuItem, transportationListEntriesToolStripMenuItem, transportationSearchToolStripMenuItem, transportUpdateDataToolStripMenuItem });
             transportationToolStripMenuItem.Name = "transportationToolStripMenuItem";
-            transportationToolStripMenuItem.Size = new Size(95, 20);
+            transportationToolStripMenuItem.Size = new Size(96, 20);
             transportationToolStripMenuItem.Text = "Transportation";
             // 
             // transportationRegisterTransportToolStripMenuItem
             // 
             transportationRegisterTransportToolStripMenuItem.Name = "transportationRegisterTransportToolStripMenuItem";
-            transportationRegisterTransportToolStripMenuItem.Size = new Size(191, 22);
+            transportationRegisterTransportToolStripMenuItem.Size = new Size(192, 22);
             transportationRegisterTransportToolStripMenuItem.Text = "Register Transport";
             // 
             // transportationRegisterEntryToolStripMenuItem
             // 
             transportationRegisterEntryToolStripMenuItem.Name = "transportationRegisterEntryToolStripMenuItem";
-            transportationRegisterEntryToolStripMenuItem.Size = new Size(191, 22);
+            transportationRegisterEntryToolStripMenuItem.Size = new Size(192, 22);
             transportationRegisterEntryToolStripMenuItem.Text = "Register Entry";
             // 
             // transportationListEntriesToolStripMenuItem
             // 
             transportationListEntriesToolStripMenuItem.Name = "transportationListEntriesToolStripMenuItem";
-            transportationListEntriesToolStripMenuItem.Size = new Size(191, 22);
+            transportationListEntriesToolStripMenuItem.Size = new Size(192, 22);
             transportationListEntriesToolStripMenuItem.Text = "List Entries";
             // 
             // transportationSearchToolStripMenuItem
             // 
             transportationSearchToolStripMenuItem.Name = "transportationSearchToolStripMenuItem";
-            transportationSearchToolStripMenuItem.Size = new Size(191, 22);
+            transportationSearchToolStripMenuItem.Size = new Size(192, 22);
             transportationSearchToolStripMenuItem.Text = "Search...";
+            // 
+            // transportUpdateDataToolStripMenuItem
+            // 
+            transportUpdateDataToolStripMenuItem.Name = "transportUpdateDataToolStripMenuItem";
+            transportUpdateDataToolStripMenuItem.Size = new Size(192, 22);
+            transportUpdateDataToolStripMenuItem.Text = "Update Transport Data";
             // 
             // warehousesToolStripMenuItem
             // 
@@ -271,7 +284,7 @@
             // warehousesAddToolStripMenuItem
             // 
             warehousesAddToolStripMenuItem.Name = "warehousesAddToolStripMenuItem";
-            warehousesAddToolStripMenuItem.Size = new Size(180, 22);
+            warehousesAddToolStripMenuItem.Size = new Size(96, 22);
             warehousesAddToolStripMenuItem.Text = "Add";
             // 
             // storesToolStripMenuItem
@@ -284,7 +297,7 @@
             // storesAddToolStripMenuItem
             // 
             storesAddToolStripMenuItem.Name = "storesAddToolStripMenuItem";
-            storesAddToolStripMenuItem.Size = new Size(180, 22);
+            storesAddToolStripMenuItem.Size = new Size(96, 22);
             storesAddToolStripMenuItem.Text = "Add";
             // 
             // employeeToolStripMenuItem
@@ -318,6 +331,12 @@
             employeeSearchByToolStripMenuItem.Size = new Size(194, 22);
             employeeSearchByToolStripMenuItem.Text = "Search by...";
             // 
+            // employeeUpdateDataToolStripMenuItem
+            // 
+            employeeUpdateDataToolStripMenuItem.Name = "employeeUpdateDataToolStripMenuItem";
+            employeeUpdateDataToolStripMenuItem.Size = new Size(194, 22);
+            employeeUpdateDataToolStripMenuItem.Text = "Update Employee Data";
+            // 
             // projectToolStripMenuItem
             // 
             projectToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { projectAddToolStripMenuItem, projectListToolStripMenuItem, projectSearchByToolStripMenuItem, projectUpdateDataToolStripMenuItem });
@@ -328,20 +347,26 @@
             // projectAddToolStripMenuItem
             // 
             projectAddToolStripMenuItem.Name = "projectAddToolStripMenuItem";
-            projectAddToolStripMenuItem.Size = new Size(180, 22);
+            projectAddToolStripMenuItem.Size = new Size(179, 22);
             projectAddToolStripMenuItem.Text = "Add";
             // 
             // projectListToolStripMenuItem
             // 
             projectListToolStripMenuItem.Name = "projectListToolStripMenuItem";
-            projectListToolStripMenuItem.Size = new Size(180, 22);
+            projectListToolStripMenuItem.Size = new Size(179, 22);
             projectListToolStripMenuItem.Text = "List";
             // 
             // projectSearchByToolStripMenuItem
             // 
             projectSearchByToolStripMenuItem.Name = "projectSearchByToolStripMenuItem";
-            projectSearchByToolStripMenuItem.Size = new Size(180, 22);
+            projectSearchByToolStripMenuItem.Size = new Size(179, 22);
             projectSearchByToolStripMenuItem.Text = "Search by...";
+            // 
+            // projectUpdateDataToolStripMenuItem
+            // 
+            projectUpdateDataToolStripMenuItem.Name = "projectUpdateDataToolStripMenuItem";
+            projectUpdateDataToolStripMenuItem.Size = new Size(179, 22);
+            projectUpdateDataToolStripMenuItem.Text = "Update Project Data";
             // 
             // label1
             // 
@@ -457,30 +482,6 @@
             label_Table_Name.Name = "label_Table_Name";
             label_Table_Name.Size = new Size(0, 15);
             label_Table_Name.TabIndex = 0;
-            // 
-            // clientUpdateDataToolStripMenuItem
-            // 
-            clientUpdateDataToolStripMenuItem.Name = "clientUpdateDataToolStripMenuItem";
-            clientUpdateDataToolStripMenuItem.Size = new Size(180, 22);
-            clientUpdateDataToolStripMenuItem.Text = "Update Client Data";
-            // 
-            // employeeUpdateDataToolStripMenuItem
-            // 
-            employeeUpdateDataToolStripMenuItem.Name = "employeeUpdateDataToolStripMenuItem";
-            employeeUpdateDataToolStripMenuItem.Size = new Size(194, 22);
-            employeeUpdateDataToolStripMenuItem.Text = "Update Employee Data";
-            // 
-            // projectUpdateDataToolStripMenuItem
-            // 
-            projectUpdateDataToolStripMenuItem.Name = "projectUpdateDataToolStripMenuItem";
-            projectUpdateDataToolStripMenuItem.Size = new Size(180, 22);
-            projectUpdateDataToolStripMenuItem.Text = "Update Project Data";
-            // 
-            // transportUpdateDataToolStripMenuItem
-            // 
-            transportUpdateDataToolStripMenuItem.Name = "transportUpdateDataToolStripMenuItem";
-            transportUpdateDataToolStripMenuItem.Size = new Size(191, 22);
-            transportUpdateDataToolStripMenuItem.Text = "Update Transport Data";
             // 
             // Sql_Interactor_Menu
             // 
