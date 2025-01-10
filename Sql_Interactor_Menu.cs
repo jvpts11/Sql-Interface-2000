@@ -327,8 +327,14 @@ namespace Sql_Interactor
 
         private void carRegisterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Regist_Car regist_Car = new Regist_Car(workers_database_connection,connection);
+            Regist_Car regist_Car = new Regist_Car(workers_database_connection, connection);
             regist_Car.Show();
+        }
+
+        private void carAddModelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Regist_Car_Model regist_Car_Model = new Regist_Car_Model(workers_database_connection, connection);
+            regist_Car_Model.Show();
         }
     }
 }

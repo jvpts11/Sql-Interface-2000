@@ -187,7 +187,7 @@ namespace Sql_Interactor
         //função para inserir car
         private void InsertCarData(string carPlate, int carYear, int carColorId, int carModelId)
         {
-            // Convert the year to a date (e.g., 2005 -> 2005-01-01)
+            // converter year(int) to (date)
             string carYearAsDate = $"{carYear}-01-01";
 
             string query = "INSERT INTO Car (Car_Plate, Car_Year, CarColorCar_color_id, CarModelCar_Model_Id) " +
@@ -211,8 +211,6 @@ namespace Sql_Interactor
                 }
             }
         }
-
-
     }
 }
 

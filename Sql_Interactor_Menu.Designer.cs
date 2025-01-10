@@ -186,6 +186,7 @@
             carAddModelToolStripMenuItem.Name = "carAddModelToolStripMenuItem";
             carAddModelToolStripMenuItem.Size = new Size(180, 22);
             carAddModelToolStripMenuItem.Text = "Add Model";
+            carAddModelToolStripMenuItem.Click += carAddModelToolStripMenuItem_Click;
             // 
             // carSearchByToolStripMenuItem
             // 
