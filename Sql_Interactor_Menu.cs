@@ -336,5 +336,11 @@ namespace Sql_Interactor
             CustomerSearchBy searchby = new CustomerSearchBy(connection);
             searchby.Show();
         }
+
+        private void clientUpdateDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateClient update_client = new UpdateClient(connection);
+            update_client.Show();
+        }
     }
 }

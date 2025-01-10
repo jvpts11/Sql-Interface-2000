@@ -79,7 +79,8 @@ namespace Sql_Interactor
 
         private void button_Search_Customer_Click(object sender, EventArgs e)
         {
-
+            CustomerSearchBy search = new CustomerSearchBy(main_database_connection);
+            search.Show();
         }
     }
 }
